@@ -2,3 +2,15 @@ body {
     font-family: arial;
     font-size: 120%;
 }
+    .allergy {
+        color: #ff5500;
+    }
+    
+    #burgerinfo {
+        color: white;
+        background-color: black;
+    }
+    
+    #customerinfo {
+
+    }
