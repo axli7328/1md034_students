@@ -17,26 +17,26 @@ Before you submit the different parts of your lab, make sure that your project f
 
 Create an index.html file which contains:
 - [x] A title
-- [ ] A main headline and two section headlines
-- [ ] Semantic tags that correspond to the parts of your page
-- [ ] A section to select burgers that contains at least three items. Each item has at least:
-	- [ ] A name
-	- [ ] An image
-	- [ ] Information about allergies 
-- [ ] A section to collect customer information:
-	- [ ] First- and Last Name (in one field)
-	- [ ] E-Mail Address
-	- [ ] Street
-	- [ ] House Number (only allowing numbers in this field)
-	- [ ] Gender (male, female, do not wish to provide as radio buttons)
-- [ ] A button to place the order
+- [x] A main headline and two section headlines
+- [x] Semantic tags that correspond to the parts of your page
+- [x] A section to select burgers that contains at least three items. Each item has at least:
+	- [x] A name
+	- [x] An image
+	- [x] Information about allergies 
+- [x] A section to collect customer information:
+	- [x] First- and Last Name (in one field)
+	- [x] E-Mail Address
+	- [x] Street
+	- [x] House Number (only allowing numbers in this field)
+	- [x] Gender (male, female, do not wish to provide as radio buttons)
+- [x] A button to place the order
 
 ## 03 CSS
 
-- [ ] Create style.css and link to it from index.html
+- [x] Create style.css and link to it from index.html
 
 Add the following style/behaviour to your website (mostly in style.css but also requiring changes in index.html):
-- [ ] Define a base line font for your site by putting the style rule on "body"
+- [x] Define a base line font for your site by putting the style rule on "body"
 - [ ] Define a larger base line font size
 - [ ] A CSS rule to make the allergy information bold
 - [ ] Define text and background color for one of your two sections (burger selection and customer information)
