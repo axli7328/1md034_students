@@ -4,19 +4,30 @@ body {
     margin: 0 auto;
 }
 
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
 .allergy {
     color: #ff5500;
 }
 
 .img-container {
-    background-image: url(https://burgerblog2017.files.wordpress.com/2017/01/burger-header.jpg);
+    background-image: url(https://www.dennisexpress.com/wp-content/uploads/2019/06/rodeo-burger-header-1280.jpg);
     height: 400px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     margin: 10px;
-    
 }
 
 .inner-container {
@@ -24,7 +35,8 @@ body {
     position: absolute;
     width: 100%;
     color: black;
-    margin-top: 150px;
+    margin-top: 120px;
+    text-size-adjust: 150%;
 }
 
 #burgerinfo {
@@ -56,7 +68,7 @@ button:hover {
 .wrapper {
     display: grid;
     grid-gap: 200px;
-    grid-template-columns: 400px 400px 500px;
+    grid-template-columns: 450px 450px 450px;
     color: black;
 }
 
@@ -64,9 +76,9 @@ button:hover {
     background-color: black;
     color: #fff;
     border-radius: 5px;
-    padding: 20px;
+    padding: 5px;
     font-size: 100%;
-
+    margin-bottom: 50px;
 }
 
 .a {
@@ -74,8 +86,18 @@ button:hover {
 }
 .b {
     grid-column: 2 ;
-    
 }
 .c {
     grid-column: 3 ;
+}
+
+.box ul, .box li{
+    margin: 0;
+    padding: 2px;
+ }
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 6vw;
+    }
 }
