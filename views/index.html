@@ -1,84 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Real burgers, not Donken</title>
-        <link rel="stylesheet" type="text/css" href="\css\style.css">
-    </head>
-    <body>
-        <h1>Welcome to Real Burgers, not Donken</h1>    
-        <main>
-            <section id="burgerinfo">
-                <h2>Select burger</h2>      
-                <p>Here you select which wonderful burger you want</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>The Burger Dream</th>
-                            <th>The Vegan Bun</th>
-                            <th>Still better than Donken Style</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><img src="https://www.peoplemagazine.co.za/app/uploads/2018/08/burger-patty.jpg" alt="Span" title="The Burger Dream" width="300"></td>
-                            <td><img src="https://nutritionrefined.com/wp-content/uploads/2017/01/veggie-burger-vegan-gluten-free-healthy-grillable.jpg" alt="Span" title="The Burger Dream" height="300" width="300"></td>
-                            <td><img src="https://ima.xgoo.jp/column/img2/oosumi/20150409_burger_end_010.jpg" alt="Span" title="The Burger Dream" height="300" width="300"></td>    
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>
-                                <ul>
-                                    <li>Contains meat, for for vegans</li>
-                                    <li>Calories, it's over 9000!!!</li>
-                                    <li>Contains <span class="allergy"> gluten </span> and <span class="allergy"> lactose </span>, but it's worth it</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>Contains beans by all means</li>
-                                    <li>Healthy amount of calories due to vegan</li>
-                                    <li>Contains no <span class="allergy"> gluten </span>, no <span class="allergy"> lactose </span>, no nothing</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>Contains an unhealthy amount of mold</li>
-                                    <li>Does calories matter when eating mold? Didn't think so</li>
-                                    <li>Contains less <span class="allergy"> gluten </span> than before</li>
-                                </ul>
-                            </td>
-                        </tr>   
-                    </tfoot>
-                </table>
-            </section>
-            <section id="customerinfo">
-                <h2>Customer information</h2>
-                <p>This is where you provide neccessary information</p>   
-                <main>
-                    <section id="contact">
-                        <form>
-                            <p>
-                                <label for="firstname">Full name</label><br>
-                                <input type="text" id="name" name="name" required="required" placeholder="First- and Last name" />
-                            </p>
-                            <p>
-                                <label for="lastname">E-mail</label><br>
-                                <input type="email" id="E-mail" name="E-mail" placeholder="Email address" />
-                            </p>
-                            <p>
-                                <label for="lastname">Street</label><br>
-                                <input type="text" id="Street" name="Street" placeholder="Street name" />
-                            </p>
-                            <p>
-                                <label for="lastname">House</label><br>
-                                <input type="number" id="House" name="House" placeholder="House number" />
-                            </p>
-                        </form>
-                    </section>
-                </main>
-                  <p>
-                        <label for="Payment options">Payment oprions</label><br />
+<head>
+    <title>Real burgers, not Donken</title>        
+    <link rel="stylesheet" type="text/css" href="\css\style.css">        
+</head>
+<body>
+    <main>
+        <div class="img-container">
+            <div class="inner-container">
+                <h1>Welcome to Real Burgers, not Donken</h1>
+            </div>
+        </div>
+        <section id="burgerinfo">
+            <h2>Select burger</h2>      
+            <p>Here you select which wonderful burger you want</p>
+            <div class="wrapper">
+                <div class="box a">
+                    <h2>The Burger Dream</h2>
+                    <img src="https://www.peoplemagazine.co.za/app/uploads/2018/08/burger-patty.jpg" alt="Span" title="The Burger Dream" width="300">
+                     <ul>
+                        <li>Contains meat, for for vegans</li>
+                        <li>Calories, it's over 9000!!!</li>
+                        <li>Contains <span class="allergy"> gluten </span> and <span class="allergy"> lactose </span>, but it's worth it</li>
+                    </ul>
+                </div>
+                <div class="box b">
+                    <h2>The Vegan Bun</h2>
+                    <img src="https://nutritionrefined.com/wp-content/uploads/2017/01/veggie-burger-vegan-gluten-free-healthy-grillable.jpg" alt="Span" title="The Burger Dream" height="300" width="300">
+                    <ul>
+                        <li>Contains beans by all means</li>
+                        <li>Healthy amount of calories due to vegan</li>
+                        <li>Contains no <span class="allergy"> gluten </span>, no <span class="allergy"> lactose </span>, no nothing</li>
+                    </ul>
+                </div>
+                <div class="box c">
+                    <h2>Still better than Donken Style</h2>
+                    <img src="https://ima.xgoo.jp/column/img2/oosumi/20150409_burger_end_010.jpg" alt="Span" title="The Burger Dream" height="300" width="300">
+                    <ul>
+                        <li>Contains an unhealthy amount of mold</li>
+                        <li>Does calories matter when eating mold? Didn't think so</li>
+                        <li>Contains less <span class="allergy"> gluten </span> than before</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="customerinfo">
+            <h2>Customer information</h2>
+            <p>This is where you provide neccessary information</p>   
+            <main>
+                <section id="contact">
+                    <form>
+                        <p>
+                            <label for="firstname">Full name</label><br>
+                            <input type="text" id="name" name="name" required="required" placeholder="First- and Last name" />
+                        </p>
+                        <p>
+                            <label for="lastname">E-mail</label><br>
+                            <input type="email" id="E-mail" name="E-mail" placeholder="Email address" />
+                        </p>
+                        <p>
+                            <label for="lastname">Street</label><br>
+                            <input type="text" id="Street" name="Street" placeholder="Street name" />
+                        </p>
+                        <p>
+                            <label for="lastname">House</label><br>
+                            <input type="number" id="House" name="House" placeholder="House number" />
+                        </p>
+                    </form>
+                </section>
+            </main>
+                <p>
+                    <label for="Payment options">Payment oprions</label><br />
                         <select id="Payment options" name="payment">
                             <option>Visa</option> 
                             <option>Mastercard</option>
@@ -92,10 +84,13 @@
                         <input type="radio" name="gender" value="dont wish" checked="checked"> Do not wish to provide <br>
                     </p>
             </section>
-            <button type="submit" class="order"><img src="https://image.flaticon.com/icons/svg/198/198416.svg" />Pls give burger</button>
-        </main>
-        <hr>
-        <footer>Pls don't steal my webpage</footer>
-    </body>
+            <section id="orderbutton">
+            <button type="submit"><img src="https://image.flaticon.com/icons/svg/198/198416.svg" />Pls give burger</button>
+            </section>
+    </main>
+    <hr>
+    <footer>Pls don't steal my webpage</footer>
+    <br>
+</body>
 </html>
     
