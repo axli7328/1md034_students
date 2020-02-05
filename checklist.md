@@ -13,7 +13,7 @@ Before you submit the different parts of your lab, make sure that your project f
 
 ## 02 HTML
 
-- [ ] Ensure the website loads when opening http://localhost:3000/
+- [x] Ensure the website loads when opening http://localhost:3000/
 
 Create an index.html file which contains:
 - [x] A title
@@ -52,8 +52,8 @@ Add the following style/behaviour to your website (mostly in style.css but also 
 
 ## 04 JavaScript and Vue
 
-- [ ] Create js_script.js and vue_script.js
-- [ ] Link to js_script.js, vue_script.js as well as vue.js in index.html
+- [x] Create js_script.js and vue_script.js
+- [x] Link to js_script.js, vue_script.js as well as vue.js in index.html
 - [ ] Add a menuItem constructor with relevant properties to js_script.js
 - [ ] Also use your menuItem constructor to instantiate a total of five burgers in js_script.js
 - [ ] Add the Vue instance example code to vue_script.js 
