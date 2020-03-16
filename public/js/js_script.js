@@ -9,7 +9,6 @@ function menuItem (name, ingredients, kCal, allergy, imagePath) {
     };
 }
 
-
 let B1 = new menuItem (
     'The Burger Dream',
     'Contains meat, not for vegans',
@@ -50,4 +49,32 @@ let B5 = new menuItem (
     'https://www.sainsburysmagazine.co.uk/uploads/media/675x882/00/5870-Peri-peri-halloumi-burger-with-sweetcorn-salsa.jpg?v=1-0'
 )
 
+let id = document.getElementById("myID");
+
+let p_1 = document.createElement("p");
+let p_2 = document.createElement("p");
+let p_3 = document.createElement("p");
+let p_4 = document.createElement("p");
+let p_5 = document.createElement("p");
+
+let B1 = document.createTextNode(B1.info());
+let B2 = document.createTextNode(B2.info());
+let B3 = document.createTextNode(B3.info());
+let B4 = document.createTextNode(B4.info());
+let B5 = document.createTextNode(B5.info());
+
+p_1.appendChild(B1);
+p_2.appendChild(B2);
+p_3.appendChild(B3);
+p_4.appendChild(B4);
+p_5.appendChild(B5);
+
+id.appendChild(p_1);
+id.appendChild(p_2);
+id.appendChild(p_3);
+id.appendChild(p_4);
+id.appendChild(p_5);
+
 console.log(B1.info() + B2.info() + B3.info() + B4.info() + B5.info()); 
+
+
