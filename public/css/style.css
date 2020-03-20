@@ -27,7 +27,7 @@ h3 {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    margin: 10px;
+    margin: 0.5em;
 }
 
 .inner-container {
@@ -47,6 +47,15 @@ h3 {
     margin: 10px;
 }
 
+
+#burgerHeader {
+    color: white;
+    background-color: black;
+    padding-left: 20px;
+    margin: 10px;
+}
+
+
 #customerinfo {
     padding-left: 50px;
     margin-bottom: 50px;
@@ -63,13 +72,6 @@ h3 {
 button:hover {
     cursor: pointer;
     background-color: coral;
-}
-
-.wrapper {
-    display: grid;
-    grid-gap: 100px;
-    grid-template-columns: 1fr 1fr 1fr;
-    color: black;
 }
 
 .box {
@@ -100,4 +102,36 @@ button:hover {
     h1 {
         font-size: 6vw;
     }
+}
+
+#container {
+  display: grid;
+  grid-gap: 0.1em;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  grid-template-rows: auto;
+  justify-items: center;
+  background-color: black;
+}
+.gridCell {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+}
+.gridCell img {
+  width: 400px;
+  height: 350px;
+}
+.gridHead {
+  text-align: center;
+}
+
+#wrapper {
+  font-size: 1.3em;
+  border: dashed;
+  border-color: white;
+  color: white;
+  background-color: black;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
 }
