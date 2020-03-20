@@ -3,8 +3,8 @@
   <head>
     
     <script src="https://vuejs.org/js/vue.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="\css\style.css">
     <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css?version=10" />
     <script type="text/javascript" src="js/menu.js" defer></script>
     <script src="js/js_script.js" defer></script>
     <script src="js/vue_script.js" defer></script>
@@ -28,109 +28,124 @@
           <h2> {{ header }} </h2>      
           <h3>{{ menu }}</h3>
         </div>
-        <div id="burgerInfo">
+        <div>
           <div id="container">
-            <div class="gridCell" v-for="burg in burgers">
-              <h4 class="gridHead">{{burg.name}}</h4>
-              <img v-bind:src="burg.imgPath" />
+            <div class="gridCell" v-for="burger in burgers">
+              <h4 class="gridHead">{{burger.name}}</h4>
+              <label class="checkBurgerLaber" for="checkBurger">
+                Choose burger:
+                <input
+                  id="checkBurger"
+                  name="selectBurger"
+                  type="checkbox"
+                  :value="burger.name"
+                  />
+              </label>
+
+              <img v-bind:src="burger.imgPath" />
               <ul>
-                <li>{{burg.kCal + " calories"}}</li>
-                <li v-if="burg.lactose">{{lactose}}</li>
-                <li v-if="burg.gluten">{{gluten}}</li>
+                <li>{{burger.kCal + " calories"}}</li>
+                <li v-if="burger.lactose">{{lactose}}</li>
+                <li v-if="burger.gluten">{{gluten}}</li>
               </ul>
             </div>
           </div>
-
-          
-          <!-- <div class="wrapper"> -->
-          <!--   <div class="box a"> -->
-          <!--     <h3>a</h3> -->
-          <!--     <img src="https://www.inquirer.com/resizer/K_2F8yYOqjUEX07i-h8UNcwCy8g=/1400x932/smart/arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/AWIBQECB2RBJPJODKBPY4Z5ETQ.jpg" alt="Span" title="The Burger Dream" width="300"> -->
-          <!--     <ul> -->
-          <!--       <li>Contains meat, not for vegans</li> -->
-          <!--       <li>Calories, it's over 9000!!!</li> -->
-          <!--       <li>Contains <span class="allergy"> gluten </span> and <span class="allergy"> lactose </span>, but it's worth it</li> -->
-          <!--     </ul> -->
-          <!--   </div> -->
-          
-          <!--   <div class="box b"> -->
-          <!--     <h3>The Vegan Bun</h3> -->
-          <!--     <img src="https://nutritionrefined.com/wp-content/uploads/2017/01/veggie-burger-vegan-gluten-free-healthy-grillable.jpg" alt="Span" title="The Vegan Bun" height="300" width="300"> -->
-          <!--     <ul> -->
-          <!--       <li>Contains beans by all means</li> -->
-          <!--       <li>Healthy amount of calories due to vegan</li> -->
-          <!--       <li>Contains no <span class="allergy"> gluten </span>, no <span class="allergy"> lactose </span>, no nothing</li> -->
-          <!--     </ul> -->
-          <!--   </div> -->
-          
-          <!--   <div class="box c"> -->
-          <!--     <h3>Still better than Donken Style</h3> -->
-          <!--     <img src="https://ima.xgoo.jp/column/img2/oosumi/20150409_burger_end_010.jpg" alt="Span" title="The Burger Dream" height="300" width="300"> -->
-          <!--     <ul> -->
-          <!--       <li>Contains an unhealthy amount of mold</li> -->
-          <!--       <li>Does calories matter when eating mold? Didn't think so</li> -->
-          <!--       <li>Contains less <span class="allergy"> gluten </span> than before</li> -->
-          <!--     </ul> -->
-          <!--   </div> -->
-          
-          <!-- </div> -->
       </section>
-      
-      <section id="customerinfo">
+
+      <section id="customerInfo">
         <h2>Customer information</h2>
         <p>This is where you provide neccessary information</p>   
         <main>
           <section id="contact">
             <form>
               <p>
-                <label for="firstname">Full name</label><br>
-                <input type="text" id="name" name="name" required="required" placeholder="First- and Last name" />
+                <label for="fullName">Full name</label><br>
+                <input
+                  v-model="fullName"
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  required="required"
+                  placeholder="First and last name"/>
+              </p>
+              
+              <p>
+                <label for="Email">E-mail</label><br>
+                <input
+                  v-model="email"
+                  type="email"
+                  id="E-mail"
+                  name="E-mail"
+                  placeholder="Email address" />
+              </p>
+              
+              <p>
+                <label for="StreetAddress">Street</label><br>
+                <input
+                  v-model="street"
+                  type="text"
+                  id="Street"
+                  name="Street"
+                  placeholder="Street name" />
               </p>
               <p>
-                <label for="lastname">E-mail</label><br>
-                <input type="email" id="E-mail" name="E-mail" placeholder="Email address" />
+                <label for="HouseNumber">House</label><br>
+                <input
+                  v-model="house"
+                  type="number"
+                  id="House"
+                  name="House"
+                  placeholder="House number" />
               </p>
-              <p>
-                <label for="lastname">Street</label><br>
-                <input type="text" id="Street" name="Street" placeholder="Street name" />
-              </p>
-              <p>
-                <label for="lastname">House</label><br>
-                <input type="number" id="House" name="House" placeholder="House number" />
-              </p>
-            </form>
           </section>
-        </main>
-        
-        <p>
-          <label for="Payment options">Payment oprions</label><br />
-          <select id="Payment options" name="payment">
-            <option>Visa</option> 
-            <option>Mastercard</option>
-            <option selected="selected">Swish</option selected="selected">
-            <option>Bitcoin</option>
-          </select>
-        </p>
-        
-        <p> Gender <br>
-          <input type="radio" name="gender" value="male"> Male <br>
-          <input type="radio" name="gender" value="female"> Female <br>
-          <input type="radio" name="gender" value="dont wish" checked="checked"> Do not wish to provide <br>
-        </p>
-        
+          
+          <p>
+            <label for="payment options">Payment options</label><br />
+            <select v-model="payment" id="payment options" name="payment">
+              <option value="Visa"> Visa </option> 
+              <option value="Mastercard"> Mastercard </option>
+              <option checked="checked"  value="Swish"> Swish </option>
+              <option value="Bitcoin"> Bitcoin </option>
+            </select>
+          </p>
+
+          <p> Gender <br>
+            <input v-model="value" type="radio" name="gender" value="male"> Male <br>
+            <input v-model="value" type="radio" name="gender" value="female"> Female <br>
+            <input v-model="value" type="radio" name="gender" value="dont wish" checked="checked"> Do not wish to provide <br>
+          </p>
+          
+          </form>          
       </section>
-      
+
       <section id="orderbutton">
-        <button type="submit"><img src="https://image.flaticon.com/icons/svg/198/198416.svg" />Pls give burger</button>
+        <button
+          v-on:click="submit"
+          type="submit"
+          value="send">
+          <img src="https://image.flaticon.com/icons/svg/198/198416.svg" />Pls give burger
+        </button>  
       </section>
       
-    </main>
-    
-    <hr>
-    <footer>Pls don't steal my webpage</footer>
-    <br>
-    
-  </body>
-  
+      <section id="currentOrder" v-if="submitted">
+        <h3>Latest order</h3>
+        <div v-if="submitted">Name: {{fullName}}</div>
+        <div>E-mail: {{email}}</div>
+        <div>Street: {{street}}</div>
+        <div>House: {{house}}</div>
+        <div>Payment method: {{payment}}</div>
+        <div>Gender: {{value}}</div>
+        <ul>
+          <li v-for="(item,index) in checkedBurger" >{{item}}</li>
+        </ul>
+      </section>
+      
+      </main>
+
+      <hr>
+      <footer> Pls don't steal my webpage </footer>
+      <br>
+
+  </body>  
 </html>
 

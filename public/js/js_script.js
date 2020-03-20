@@ -1,3 +1,15 @@
+// let myButton = document.getElementById("submitButton");
+// let allValues = document.querySelector("form");
+// myButton.onclick = function () {
+//   let array = new Array(allValues.length);
+//   for(let i = 0; i < allValues.length;i++){
+//     array[i] = allValues[i].value;
+//   }
+//   console.log(array);
+//   return array;
+// };
+
+
 // function menuItem (name, ingredients, kCal, gluten, lactose, imgPath) {
 //     this.name = name;
 //     this.ingredients = ingredients;

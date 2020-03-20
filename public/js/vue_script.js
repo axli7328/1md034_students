@@ -1,10 +1,19 @@
 const vm = new Vue({
-    el: "#wrapper",
+    el: "main",
     data: {
         header: "Select Burger",
         menu: "Here you select which wonderful burger you want",
         gluten: "Contains gluten",
         lactose: "Contians lacose",
+        currentBurger: null,
+        submitted: false,
+        fullName: "",
+        email: "",
+        street: "",
+        house: "",
+        payment: "",
+        value: "",
+        checkedBurger: [],
         burgers: [
   	        {
                 name: food[0].name,
@@ -43,5 +52,22 @@ const vm = new Vue({
             },
         ]
     },
-    methods: {}
+    methods: {
+        submit: function() {
+            console.log("hej");
+            vm.submitted = true;
+            this.checkedBurger = [];
+            let checkedBoxes = document.getElementsByName("selectBurger");
+
+            for (let i = 0, j = 0; i < checkedBoxes.length; i++) {
+                if (checkedBoxes[i].checked == true) {
+                    this.checkedBurger[j] = checkedBoxes[i].value;
+                    this.currentBurger = this.checkedBurger[j];
+                    j++;
+                }
+            }
+            console.log(this.checkedBurger);
+            return this.checkedBurger;
+        }
+    }
 });

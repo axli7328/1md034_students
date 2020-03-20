@@ -39,39 +39,18 @@ h3 {
     text-size-adjust: 150%;
 }
 
-#burgerinfo {
-    color: white;
-    background-color: black;
-    padding-left: 50px;
-    border: 2px dashed white;
-    margin: 10px;
-}
-
 
 #burgerHeader {
     color: white;
     background-color: black;
-    padding-left: 20px;
-    margin: 10px;
+    padding-left: 1.5em;
+    margin: 0.5em;
 }
 
-
-#customerinfo {
-    padding-left: 50px;
-    margin-bottom: 50px;
+#customerInfo {
+    padding-left: 1.5em;
     border: 2px dashed black;
-    margin: 10px;
-}
-
-#orderbutton {
-    margin-left: 50px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-button:hover {
-    cursor: pointer;
-    background-color: coral;
+    margin: 0.5em;
 }
 
 .box {
@@ -117,14 +96,15 @@ button:hover {
   flex-direction: column;
   justify-items: center;
   justify-content: center;
+  margin-bottom: 0.5em;
 }
 .gridCell img {
   width: 400px;
   height: 350px;
 }
-.gridHead {
-  text-align: center;
-}
+/* .gridHead { */
+/*   text-align: center; */
+/* } */
 
 #wrapper {
   font-size: 1.3em;
@@ -134,4 +114,25 @@ button:hover {
   background-color: black;
   margin-left: 0.3em;
   margin-right: 0.3em;
+}
+
+#orderbutton {
+    margin-left: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+#submitButton:hover {
+  background-color: #7cfc00;
+  border-color: #a3c058;
+  cursor: pointer;
+}
+
+#submitButton:active {
+  transform: translateY(4px);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+#currentOrder {
+    margin-left: 1.5em;    
 }
