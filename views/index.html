@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
-    <script src="https://vuejs.org/js/vue.js" defer></script>
+
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/style.css?version=10" />
+    <script src="https://vuejs.org/js/vue.js" defer></script>
     <script type="text/javascript" src="js/menu.js" defer></script>
     <script src="js/js_script.js" defer></script>
+    <script src="/socket.io/socket.io.js" defer></script>
     <script src="js/vue_script.js" defer></script>
     
     <title>Real burgers, not Donken</title>
@@ -79,24 +80,25 @@
                   placeholder="Email address" />
               </p>
               
-              <p>
-                <label for="StreetAddress">Street</label><br>
-                <input
-                  v-model="street"
-                  type="text"
-                  id="Street"
-                  name="Street"
-                  placeholder="Street name" />
-              </p>
-              <p>
-                <label for="HouseNumber">House</label><br>
-                <input
-                  v-model="house"
-                  type="number"
-                  id="House"
-                  name="House"
-                  placeholder="House number" />
-              </p>
+              <!-- <p> -->
+              <!--   <label for="StreetAddress">Street</label><br> -->
+              <!--   <input -->
+              <!--     v-model="street" -->
+              <!--     type="text" -->
+              <!--     id="Street" -->
+              <!--     name="Street" -->
+              <!--     placeholder="Street name" /> -->
+              <!-- </p> -->
+              <!-- <p> -->
+              <!--   <label for="HouseNumber">House</label><br> -->
+              <!--   <input -->
+              <!--     v-model="house" -->
+              <!--     type="number" -->
+              <!--     id="House" -->
+              <!--     name="House" -->
+              <!--     placeholder="House number" /> -->
+              <!-- </p> -->
+              
           </section>
           
           <p>
@@ -117,29 +119,42 @@
           
           </form>          
       </section>
-
-      <section id="orderbutton">
-        <button
-          v-on:click="submit"
-          type="submit"
-          value="send">
-          <img src="https://image.flaticon.com/icons/svg/198/198416.svg" />Pls give burger
-        </button>  
-      </section>
       
-      <section id="currentOrder" v-if="submitted">
-        <h3>Latest order</h3>
-        <div v-if="submitted">Name: {{fullName}}</div>
-        <div>E-mail: {{email}}</div>
-        <div>Street: {{street}}</div>
-        <div>House: {{house}}</div>
-        <div>Payment method: {{payment}}</div>
-        <div>Gender: {{value}}</div>
-        <ul>
-          <li v-for="(item,index) in checkedBurger" >{{item}}</li>
-        </ul>
-      </section>
-      
+      <div>
+        <h1>Click in the map!</h1>
+        <a href="/dispatcher" target="_blank"
+           >Open dispatcher in new window</a                                           >
+        <div class="view-box">
+          <div id="dots" v-on:click="addOrder">
+            <div
+              v-for="(order, key) in orders"
+              v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}"
+              >
+              {{key}}
+            </div>
+          </div>
+        </div>
+        
+        <section id="orderbutton">
+          <button
+            v-on:click="submit"
+            type="submit"
+            value="send">
+            <img src="https://image.flaticon.com/icons/svg/198/198416.svg" />Pls give burger
+          </button>  
+        </section>
+        
+        <section id="currentOrder" v-if="submitted">
+          <h3>Latest order</h3>
+          <div v-if="submitted">Name: {{fullName}}</div>
+          <div>E-mail: {{email}}</div>
+          <div>Payment method: {{payment}}</div>
+          <div>Gender: {{value}}</div>
+          <ul>
+            <li v-for="(item,index) in checkedBurger" >{{item}}</li>
+          </ul>
+        </section>
+        
       </main>
 
       <hr>
