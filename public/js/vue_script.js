@@ -16,7 +16,7 @@ const vm = new Vue({
         value: "",
         nextInt: 0,
         checkedBurger: [],
-        order: { orderId: "T", details: { x:0, y:0 }, orderItems: [] },
+        order: { orderId: "T", details: { x:0, y:0 }, orderItems: [], customerInfo: [] },
         orders: {},
         burgers: [
   	        {
@@ -56,44 +56,7 @@ const vm = new Vue({
             }
         ]
     },
-    // created: function() {
-    //     /* When the page is loaded, get the current orders stored on the server.
-    //      * (the server's code is in app.js) */
-    //     socket.on(
-    //         "initialize",
-    //         function(data) {
-    //             this.orders = data.orders;
-    //         }.bind(this)
-    //     );
-
-    //     /* Whenever an addOrder is emitted by a client (every open map.html is
-    //      * a client), the server responds with a currentQueue message (this is
-    //      * defined in app.js). The message's data payload is the entire updated
-    //      * order object. Here we define what the client should do with it.
-    //      * Spoiler: We replace the current local order object with the new one. */
-    //     socket.on(
-    //         "currentQueue",
-    //         function(data) {
-    //             this.orders = data.orders;
-    //         }.bind(this)
-    //     );
     methods: {
-        // submit: function() {
-        //     console.log("hej");
-        //     vm.submitted = true;
-        //     this.checkedBurger = [];
-        //     let checkedBoxes = document.getElementsByName("selectBurger");
-
-        //     for (let i = 0, j = 0; i < checkedBoxes.length; i++) {
-        //         if (checkedBoxes[i].checked == true) {
-        //             this.checkedBurger[j] = checkedBoxes[i].value;
-        //             this.currentBurger = this.checkedBurger[j];
-        //             j++;
-        //         }
-        //     }
-        //     console.log(this.checkedBurger);
-        //     return this.checkedBurger;
-        // },
         getNext: function() {
             this.nextInt = this.nextInt + 1;
             return this.nextInt;
@@ -111,7 +74,9 @@ const vm = new Vue({
                     j++;
                 }
             }
+            
             this.order.orderItems = this.checkedBurger;
+            this.order.customerInfo = [this.fullName, this.payment, this.value];
             
             socket.emit("addOrder", {
                 orderId: this.getNext(),
@@ -119,7 +84,8 @@ const vm = new Vue({
                     x: this.order.details.x,
                     y: this.order.details.y
                 },
-                orderItems: this.order.orderItems
+                orderItems: this.order.orderItems,
+                customerInfo: this.order.customerInfo
             });
         },
         displayOrder: function(event) {
