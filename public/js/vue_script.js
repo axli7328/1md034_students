@@ -7,40 +7,40 @@ const vm = new Vue({
         lactose: "Contians lacose",
         burgers: [
   	        {
-                name: B1.getName(),
-                lactose: B1.getLactoseInfo(),
-                gluten: B1.getGlutenInfo(),
-                kCal: B1.getKcal(),
-                imgPath: B1.getImgPath()
+                name: food[0].name,
+                lactose: food[0].lactose,
+                gluten: food[0].gluten,
+                kCal: food[0].kCal,
+                imgPath: food[0].img
             },
             {
-                name: B2.getName(),
-                lactose: B2.getLactoseInfo(),
-                gluten: B2.getGlutenInfo(),
-                kCal: B2.getKcal(),
-                imgPath: B2.getImgPath()
+                name: food[1].name,
+                lactose: food[1].lactose,
+                gluten: food[1].gluten,
+                kCal: food[1].kCal,
+                imgPath: food[1].img
             },
             {
-                name: B3.getName(),
-                lactose: B3.getLactoseInfo(),
-                gluten: B3.getGlutenInfo(),
-                kCal: B3.getKcal(),
-                imgPath: B3.getImgPath()
+                name: food[2].name,
+                lactose: food[2].lactose,
+                gluten: food[2].gluten,
+                kCal: food[2].kCal,
+                imgPath: food[2].img
             },
             {
-                name: B4.getName(),
-                lactose: B4.getLactoseInfo(),
-                gluten: B4.getGlutenInfo(),
-                kCal: B4.getKcal(),
-                imgPath: B4.getImgPath()
+                name: food[3].name,
+                lactose: food[3].lactose,
+                gluten: food[3].gluten,
+                kCal: food[3].kCal,
+                imgPath: food[3].img
             },
-            {            
-                name: B5.getName(),
-                lactose: B5.getLactoseInfo(),
-                gluten: B5.getGlutenInfo(),
-                kCal: B5.getKcal(),
-                imgPath: B5.getImgPath()
-            }
+            {
+                name: food[4].name,
+                lactose: food[4].lactose,
+                gluten: food[4].gluten,
+                kCal: food[4].kCal,
+                imgPath: food[4].img
+            },
         ]
     },
     methods: {}

@@ -1,79 +1,79 @@
-function menuItem (name, ingredients, kCal, gluten, lactose, imgPath) {
-    this.name = name;
-    this.ingredients = ingredients;
-    this.calories = kCal;
-    this.gluten = gluten;
-    this.lactose = lactose;
-    this.imgPath = imgPath;
-    this.info = function() {
-        return this.name + ' ' + this.calories + this.gluten;
-    };
-}
+// function menuItem (name, ingredients, kCal, gluten, lactose, imgPath) {
+//     this.name = name;
+//     this.ingredients = ingredients;
+//     this.calories = kCal;
+//     this.gluten = gluten;
+//     this.lactose = lactose;
+//     this.imgPath = imgPath;
+//     this.info = function() {
+//         return this.name + ' ' + this.calories + this.gluten;
+//     };
+// }
 
-let B1 = new menuItem (
-    'The Burger Dream',
-    'Contains meat, not for vegans',
-    9000,
-    true,
-    true,
-    'https://www.peoplemagazine.co.za/app/uploads/2018/08/burger-patty.jpg',
-)
+// let B1 = new menuItem (
+//     'The Burger Dream',
+//     'Contains meat, not for vegans',
+//     9000,
+//     true,
+//     true,
+//     'https://www.peoplemagazine.co.za/app/uploads/2018/08/burger-patty.jpg',
+// )
 
-let B2 = new menuItem (
-    'The Vegan Bune',
-    'Contains beans by all means',
-    100,
-    true,
-    true,
-    'https://nutritionrefined.com/wp-content/uploads/2017/01/veggie-burger-vegan-gluten-free-healthy-grillable.jpg'
-)
+// let B2 = new menuItem (
+//     'The Vegan Bune',
+//     'Contains beans by all means',
+//     100,
+//     true,
+//     true,
+//     'https://nutritionrefined.com/wp-content/uploads/2017/01/veggie-burger-vegan-gluten-free-healthy-grillable.jpg'
+// )
 
-let B3 = new menuItem (
-    'Still better than Donken Style',
-    'Contains an unhealthy amount of mold',
-    200,
-    true,
-    true,
-    'https://ima.xgoo.jp/column/img2/oosumi/20150409_burger_end_010.jpg'
-)
+// let B3 = new menuItem (
+//     'Still better than Donken Style',
+//     'Contains an unhealthy amount of mold',
+//     200,
+//     true,
+//     true,
+//     'https://ima.xgoo.jp/column/img2/oosumi/20150409_burger_end_010.jpg'
+// )
 
-let B4 = new menuItem (
-    'Chicken for chickens',
-    'Contains a bird',
-    15,
-    true,
-    true,
-    'https://www.kitchensanctuary.com/wp-content/uploads/2017/08/Crispy-Chicken-Burger-with-Honey-Mustard-Coleslaw-recipe-tall-FS.webp'
-)
+// let B4 = new menuItem (
+//     'Chicken for chickens',
+//     'Contains a bird',
+//     15,
+//     true,
+//     true,
+//     'https://www.kitchensanctuary.com/wp-content/uploads/2017/08/Crispy-Chicken-Burger-with-Honey-Mustard-Coleslaw-recipe-tall-FS.webp'
+// )
 
-let B5 = new menuItem (
-    'Halloumi Heaven',
-    'Contains cheese',
-    500,
-    true,
-    false,
-    'https://www.sainsburysmagazine.co.uk/uploads/media/675x882/00/5870-Peri-peri-halloumi-burger-with-sweetcorn-salsa.jpg?v=1-0'
-)
+// let B5 = new menuItem (
+//     'Halloumi Heaven',
+//     'Contains cheese',
+//     500,
+//     true,
+//     false,
+//     'https://www.sainsburysmagazine.co.uk/uploads/media/675x882/00/5870-Peri-peri-halloumi-burger-with-sweetcorn-salsa.jpg?v=1-0'
+// )
 
-menuItem.prototype.getName = function getName() {
-  return this.name;
-};
-menuItem.prototype.getLactoseInfo = function getLactoseInfo() {
-  	if (this.lactose == true) {
-  		return ", Contains lactose";	  
-    }
-};
-menuItem.prototype.getGlutenInfo = function getGlutenInfo() {
-		if (this.gluten == true) {
-  		return ", Contains gluten";	  
-    }
-};
-menuItem.prototype.getKcal = function getKcal() {
-    return this.calories;
-};
-menuItem.prototype.getImgPath = function getImgPath() {
-    return this.imgPath;
-};
+// menuItem.prototype.getName = function getName() {
+//   return this.name;
+// };
+// menuItem.prototype.getLactoseInfo = function getLactoseInfo() {
+//   	if (this.lactose == true) {
+//   		return ", Contains lactose";	  
+//     }
+// };
+// menuItem.prototype.getGlutenInfo = function getGlutenInfo() {
+// 		if (this.gluten == true) {
+//   		return ", Contains gluten";	  
+//     }
+// };
+// menuItem.prototype.getKcal = function getKcal() {
+//     return this.calories;
+// };
+// menuItem.prototype.getImgPath = function getImgPath() {
+//     return this.imgPath;
+// };
 
 // let id = document.getElementById("myID");
 
